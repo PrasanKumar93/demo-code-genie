@@ -20,6 +20,15 @@
 4. **Use Yup** for validation schemas
 5. **Use Vitest** for all tests
 
+## Imports
+
+- use modern import syntax for all files
+
+```ts
+import { MongoClient } from "mongodb";
+import TEST from "../../some-file.js"; //new syntax needs js extension
+```
+
 ## Config Files
 
 - `package.json` - Dependencies & scripts

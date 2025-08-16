@@ -1,6 +1,6 @@
 # Technology Stack Overview
 
-**Express.js + TypeScript + MongoDB** stack. **Do not suggest alternatives** - use existing stack.
+**Express.js + TypeScript + MongoDB** stack. **Do not suggest alternatives** - use this stack.
 
 ## Core Stack
 

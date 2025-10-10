@@ -1,0 +1,57 @@
+name: Sample Task Specification Form
+description: Capture required details before coding starts
+title: "[TASK]: "
+labels: ["task-spec"]
+assignees:
+  - your-username
+body:
+  - type: textarea
+    id: task_explanation
+    attributes:
+      label: Task explanation
+      description: Describe what needs to be done
+      placeholder: e.g., "Implement user authentication flow"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Select or add what defines 'Done'
+      options:
+        - label: Unit tests written and passing
+        - label: Meets validation criteria
+        - label: Documentation updated
+
+  - type: textarea
+    id: unit_tests
+    attributes:
+      label: Unit Test Cases
+      description: Auto-generated or manually added cases
+
+  - type: textarea
+    id: tech_dependencies
+    attributes:
+      label: Tech / Package Dependencies
+      description: List any libs, services, or runtimes required
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Security & Performance
+      description: Security measures, perf expectations
+
+  - type: markdown
+    attributes:
+      value: |
+        ✅ **Please review carefully.**  
+        Coding will only begin after this spec is approved.
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Final Confirmation
+      options:
+        - label: I confirm the spec is correct and ready for development.
+          required: true

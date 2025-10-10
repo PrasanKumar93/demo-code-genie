@@ -1,6 +1,6 @@
 # Technology Stack Overview
 
-**Express.js + TypeScript + MongoDB** stack. **Do not suggest alternatives** - use existing stack.
+**Express.js + TypeScript + MongoDB** stack. **Do not suggest alternatives** - use this stack.
 
 ## Core Stack
 
@@ -19,6 +19,15 @@
 3. **Use Prisma** for all database operations
 4. **Use Yup** for validation schemas
 5. **Use Vitest** for all tests
+
+## Imports
+
+- use modern import syntax for all files
+
+```ts
+import { MongoClient } from "mongodb";
+import TEST from "../../some-file.js"; //new syntax needs js extension
+```
 
 ## Config Files
 

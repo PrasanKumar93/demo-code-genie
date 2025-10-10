@@ -142,3 +142,5 @@ vite.config.ts.timestamp-*
 
 .aider.*
 .aider*
+# But include this specific one
+!.aider.chat.history.md

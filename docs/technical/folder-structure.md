@@ -83,7 +83,7 @@ project-root/
 
 ## Key Rules & Conventions
 
-### File Naming
+### File Naming (follow strictly)
 
 - **Use kebab-case** for all files and folders (e.g., `user-controller.ts`, `date-utils.ts`)
 - **Use PascalCase** for classes and interfaces

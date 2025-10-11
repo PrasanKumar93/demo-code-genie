@@ -19,43 +19,46 @@ body:
     attributes:
       label: Task validations
       description: Describe what validation needs to be done on the task
-      placeholder: e.g., "- DOB should be a valid date
-      - should be in the past
-      - should be required
-      - must be greater than 18 years old
-      - must be less than 150 years old"
+      placeholder: |
+        e.g., "- DOB should be a valid date
+        - should be in the past
+        - should be required
+        - must be greater than 18 years old
+        - must be less than 150 years old"
 
   - type: textarea
     id: unit_tests
     attributes:
       label: Unit Test Cases
       description: Auto-generated or manually added cases
-      placeholder: e.g., "- register a user with a valid DOB and check if the user is registered successfully by fetching the user from the database
-      - Validate a user with a DOB that is not valid based on the validations defined"
+      placeholder: |
+        e.g., "- register a user with a valid DOB and check if the user is registered successfully by fetching the user from the database
+        - Validate a user with a DOB that is not valid based on the validations defined"
 
   - type: textarea
     id: task_acceptance_criteria
     attributes:
       label: Task acceptance criteria
       description: Describe what acceptance criteria needs to be done on the task
-      placeholder: e.g., "- The user should be registered successfully with the valid DOB
-      - Invalid DOB (as per validations defined) should not be allowed to register
-      - In frontend design, DOB field must be displayed in dd-mm-yyyy format
-      - The user should be able to login successfully with existing credentials"
+      placeholder: |
+        e.g., "- The user should be registered successfully with the valid DOB
+        - Invalid DOB (as per validations defined) should not be allowed to register
+        - In frontend design, DOB field must be displayed in dd-mm-yyyy format
+        - The user should be able to login successfully with existing credentials"
     validations:
       required: true
-      
+
   - type: textarea
     id: task_context_files
     attributes:
       label: Task context files
       description: List any files to be included in the context of LLM to complete the task
-      placeholder: e.g., "- src/routes/user-routes.ts
-      - src/services/user-service.ts
-      - src/utils/date-utils.ts
-      - src/types/user-types.ts
-      - src/database/connection.ts"
-
+      placeholder: |
+        e.g., "- src/routes/user-routes.ts
+        - src/services/user-service.ts
+        - src/utils/date-utils.ts
+        - src/types/user-types.ts
+        - src/database/connection.ts"
 
   - type: textarea
     id: tech_dependencies

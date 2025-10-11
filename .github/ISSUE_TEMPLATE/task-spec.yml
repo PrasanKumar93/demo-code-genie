@@ -70,14 +70,14 @@ body:
       description: Security measures, perf expectations
       placeholder: e.g., ""
 
-  - type: markdown
+  - type: textarea
     id: other_business_context
     attributes:
       label: Other business context
       description: Any other business context good for task completion
       placeholder: e.g., ""
 
-  - type: markdown
+  - type: textarea
     id: other_notes
     attributes:
       label: Other notes
@@ -99,4 +99,5 @@ body:
       label: Final Confirmation
       options:
         - label: I confirm the spec is correct and ready for development. (Good context now means less time spent in code review later :)
-          required: true
+    validations:
+      required: true

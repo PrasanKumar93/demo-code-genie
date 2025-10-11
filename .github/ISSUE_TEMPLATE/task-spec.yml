@@ -64,7 +64,8 @@ body:
     id: tech_dependencies
     attributes:
       label: Tech / Package Dependencies
-      description: Use existing material design library for frontend design of new Date Picker field, create DateField as a component and use it in the user registration form
+      description: Any technical or package dependencies to be used in the task
+      placeholder: e.g., Use existing material design library for frontend design of new Date Picker field, create DateField as a component and use it in the user registration form
 
   - type: textarea
     id: security

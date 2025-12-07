@@ -43,3 +43,16 @@ export const findByFilters = async (collectionName: string, filters: object) => 
     throw error;
   }
 };
+
+export const updateById = async (collectionName: string, id: string, update: object) => {
+  try {
+    const db = client.db(dbName);
+    const collection = db.collection(collectionName);
+    const result = await collection.updateOne({ _id: new ObjectId(id) }, { $set: update });
+    LoggerCls.info("Document updated by ID", result);
+    return result;
+  } catch (error) {
+    LoggerCls.error("Error updating document by ID", error);
+    throw error;
+  }
+};

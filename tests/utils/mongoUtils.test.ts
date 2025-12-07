@@ -41,4 +41,14 @@ describe("MongoDB Utility Functions", () => {
     const foundDocuments = await findByFilters(collectionName, { value: { $gt: 0 } });
     expect(foundDocuments.length).toBeGreaterThanOrEqual(2);
   });
+
+  it("should update a document by ID", async () => {
+    const document = { name: "UpdateTest", value: 50 };
+    const insertResult = await insertDocument(collectionName, document);
+    const update = { value: 100 };
+    const updateResult = await updateById(collectionName, insertResult.insertedId.toString(), update);
+    expect(updateResult.modifiedCount).toBe(1);
+    const updatedDocument = await findById(collectionName, insertResult.insertedId.toString());
+    expect(updatedDocument.value).toBe(100);
+  });
 });

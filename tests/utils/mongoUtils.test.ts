@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
-import { insertDocument, findById, findByFilters } from "../../src/utils/mongoUtils";
+import { insertDocument, findById, findByFilters, updateById } from "../../src/utils/mongoUtils";
 import { MongoClient } from "mongodb";
 import PROJ_ENV from "../../src/config";
 

@@ -8,7 +8,6 @@
     "build": "tsc",
     "test": "vitest run"
   },
-  "mongodb": "^5.0.0"
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PrasanKumar93/demo-code-genie.git"
@@ -26,6 +25,7 @@
   "dependencies": {
     "chalk": "^5.5.0",
     "dotenv": "^17.2.1",
-    "flatted": "^3.3.3"
+    "flatted": "^3.3.3",
+    "mongodb": "^5.0.0"
   }
 }

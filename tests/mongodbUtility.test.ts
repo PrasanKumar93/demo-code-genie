@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll, afterAll, beforeEach } from "vitest";
 import MongoDBUtility from "../src/utils/mongodbUtility";
 
 let mongoUtil: MongoDBUtility;
+const testCollection = "testCollection";
 
 beforeAll(async () => {
   mongoUtil = new MongoDBUtility();

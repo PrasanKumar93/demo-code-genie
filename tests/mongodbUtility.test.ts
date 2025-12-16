@@ -8,6 +8,11 @@ beforeAll(async () => {
   await mongoUtil.connect();
 });
 
+beforeEach(async () => {
+  const db = mongoUtil.client.db(mongoUtil.dbName);
+  await db.collection(testCollection).deleteMany({});
+});
+
 afterAll(async () => {
   await mongoUtil.close();
 });

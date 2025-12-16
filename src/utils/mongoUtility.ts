@@ -37,14 +37,25 @@ export const insertDocument = async (collectionName: string, document: object) =
   }
 };
 
-export const readDocument = async (collectionName: string, query: object) => {
+export const findOneDocument = async (collectionName: string, query: object) => {
   try {
     const db = await connectToDatabase();
-    const document = await db.collection(collectionName).findOne(query);
-    LoggerCls.info("Document read", document);
-    return document;
+    const result = await db.collection(collectionName).findOne(query);
+    LoggerCls.info("Document found", result);
+    return result;
   } catch (error) {
     LoggerCls.error("Failed to read document", error);
+    throw error;
+  }
+};
+export const findManyDocuments = async (collectionName: string, query: object) => {
+  try {
+    const db = await connectToDatabase();
+    const documents = await db.collection(collectionName).find(query).toArray();
+    LoggerCls.info("Documents found", documents);
+    return documents;
+  } catch (error) {
+    LoggerCls.error("Failed to find documents", error);
     throw error;
   }
 };

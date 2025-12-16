@@ -11,7 +11,7 @@ class MongoDBUtility {
   }
 
   async connect() {
-    if (!this.client.isConnected()) {
+    if (!this.client.topology || !this.client.topology.isConnected()) {
       await this.client.connect();
     }
   }
